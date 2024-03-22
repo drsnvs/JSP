@@ -30,8 +30,14 @@
         <%!
             Connection con;
             Statement st;
+            
         %>
-        <form>
+        
+        <%--JSP scripting elements--%>
+        <%
+            session.setAttribute("id",session.getId());
+        %>
+        <form action="secondPage.jsp" method="post">
             <table align="center" border="1" cellspacing="0" id="tbl">
                 <tr>
                     <td>
@@ -44,12 +50,11 @@
                 </tr>
             </table>
         </form>
-        <h1>Hello World!</h1>
-        
-        <%--JSP scripting expression tag--%>
-        <%= session.getId() %>
         
         
         
+        <%--JSP action tags--%>
+        <jsp:include page="footer.html" />
+
     </body>
 </html>
