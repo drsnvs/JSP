@@ -66,6 +66,7 @@
                 <%@include file="header.html" %>
             </div>
             <div id="content">
+                
                 <%--JSP scripting declaring tag--%>
                 <%!
                     Connection con;
@@ -74,6 +75,7 @@
                 
                 <%--JSP scripting elements--%>
                 <%
+//                    JSP Implicit Objects (session)
                     session.setAttribute("id",session.getId());
                 %>
                 <form action="secondPage.jsp" method="post">
